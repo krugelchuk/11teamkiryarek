@@ -1,0 +1,22 @@
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - jana_hr_data:/app/data
+    environment:
+      HOST: 0.0.0.0
+      DATABASE_PATH: /app/data/jana_hr.db
+      CORS_ORIGINS: http://localhost:5173,http://localhost:3000,http://localhost:4173
+      JANAMEN_AI_PROVIDER: ${JANAMEN_AI_PROVIDER:-disabled}
+      JANAMEN_AI_TIMEOUT: ${JANAMEN_AI_TIMEOUT:-8}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      OPENAI_MODEL: ${OPENAI_MODEL:-}
+      OPENAI_BASE_URL: ${OPENAI_BASE_URL:-}
+      JANAMEN_AI_API_TYPE: ${JANAMEN_AI_API_TYPE:-responses}
+      GEMINI_API_KEY: ${GEMINI_API_KEY:-}
+      GEMINI_MODEL: ${GEMINI_MODEL:-}
+    restart: unless-stopped
+volumes:
+  jana_hr_data:

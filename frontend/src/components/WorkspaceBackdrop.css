@@ -1,0 +1,10 @@
+.shell{isolation:isolate}
+.main{position:relative}
+.workspace-backdrop{position:absolute;inset:80px 0 0;z-index:-1;overflow:hidden;pointer-events:none;user-select:none;contain:paint}
+.workspace-backdrop-glow{position:absolute;top:-90px;right:-230px;width:950px;height:900px;background:radial-gradient(ellipse at 60% 25%,#cce8ca4a,transparent 65%)}
+.workspace-backdrop-word{position:absolute;right:-58px;top:118px;font-family:Arial,Helvetica,sans-serif;font-weight:900;font-size:clamp(170px,24vw,380px);line-height:.9;letter-spacing:-.09em;color:#e3ece3;opacity:.62;white-space:nowrap;transform:perspective(950px) rotateY(-23deg) rotateX(8deg) rotateZ(-12deg);transform-origin:right center;text-shadow:1px 1px #dce7dc,2px 2px #dae5da,3px 3px #d8e3d8,4px 4px #d6e1d6,5px 5px #d4dfd4,6px 6px #d2ddd2,7px 7px #d0dbd0,8px 8px #ced9ce,9px 9px #ccd7cc,10px 10px #cad5ca,20px 28px 30px #17451b08;animation:workspace-type-drift 20s ease-in-out infinite alternate}
+@keyframes workspace-type-drift{from{transform:perspective(950px) rotateY(-23deg) rotateX(8deg) rotateZ(-12deg) translateY(0)}to{transform:perspective(950px) rotateY(-20deg) rotateX(8deg) rotateZ(-12deg) translateY(-9px)}}
+@media(max-width:1023px){.workspace-backdrop{display:none}}
+@media(prefers-reduced-motion:reduce){.workspace-backdrop-word{animation:none}}
+@media(forced-colors:active){.workspace-backdrop{display:none}}
+@media print{.workspace-backdrop{display:none}}

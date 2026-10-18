@@ -1,0 +1,26 @@
+# Environments & logs
+.env
+.env.*
+*.log
+
+# Dependencies
+node_modules/
+frontend/node_modules/
+
+# Python cache & data
+__pycache__/
+*/__pycache__/
+data/*.db
+*.sqlite
+*.db
+
+# Build artifacts & temp
+dist/
+scratch/
+frontend/e2e/screenshots/
+.pytest_cache/
+
+# Runtime database companions and browser output
+data/
+frontend/test-results/
+frontend/playwright-report/
